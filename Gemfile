@@ -51,6 +51,32 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+
+group :development, :test, :staging do
+ # gem 'byebug', platform: :mri
+ gem 'factory_girl_rails', require: false
+ gem 'faker'
+ gem 'pry-byebug'
+ gem 'pry-rails'
+ gem 'pry-rescue'
+ gem 'rspec-rails'
+ gem 'rubocop', git: 'https://github.com/brandonweiss/rubocop'
+end
+
+group :test do
+ # gem 'capybara', require: false
+ gem 'capybara-screenshot', require: false
+ gem 'database_rewinder'
+ gem 'fakeredis', require: 'fakeredis/rspec'
+ gem 'fuubar'
+ gem 'launchy'
+ gem 'rspec_junit_formatter'
+ # gem 'selenium-webdriver'
+ gem 'timecop', require: false
+ gem 'turnip', require: false
+ gem 'webmock', require: false
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
