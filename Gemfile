@@ -8,6 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
+gem 'bootstrap-sass', '~> 3.3.1'
+# gem 'sass-rails', '>= 3.2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 gem 'pg'
@@ -26,6 +29,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -49,32 +53,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-
-group :development, :test, :staging do
- # gem 'byebug', platform: :mri
- gem 'factory_girl_rails', require: false
- gem 'faker'
- gem 'pry-byebug'
- gem 'pry-rails'
- gem 'pry-rescue'
- gem 'rspec-rails'
- gem 'rubocop', git: 'https://github.com/brandonweiss/rubocop'
-end
-
-group :test do
- # gem 'capybara', require: false
- gem 'capybara-screenshot', require: false
- gem 'database_rewinder'
- gem 'fakeredis', require: 'fakeredis/rspec'
- gem 'fuubar'
- gem 'launchy'
- gem 'rspec_junit_formatter'
- # gem 'selenium-webdriver'
- gem 'timecop', require: false
- gem 'turnip', require: false
- gem 'webmock', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
