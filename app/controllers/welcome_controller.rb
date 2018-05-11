@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.where(is_active: true)
   end
 end
